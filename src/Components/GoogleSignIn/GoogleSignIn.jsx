@@ -33,8 +33,12 @@ const GoogleSignIn = () => {
     }
     return (
         <div>
-            <button onClick={handleGoogleSignIn}>Sign In with Google</button>
-            <button onClick={handleSignOutButton}>Sign Out</button>
+            {
+                user ? <button onClick={handleSignOutButton}>Sign Out</button>
+                :
+                <button onClick={handleGoogleSignIn}>Sign In with Google</button>
+                
+            }
             {
                 user && <div style={{border: '2px solid purple'}}>
                     <h3>UserName: {user.displayName}</h3>
