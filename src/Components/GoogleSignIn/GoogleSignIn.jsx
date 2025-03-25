@@ -24,10 +24,10 @@ const GoogleSignIn = () => {
             <button onClick={handleGoogleSignIn}>Sign In with Google</button>
 
             {
-                user && <div>
+                user && <div style={{border: '2px solid purple'}}>
                     <h3>UserName: {user.displayName}</h3>
                     <p>User Email: {user.email}</p>
-                    <img src={user.photoURL} alt="" />
+                    <img style={{border: '2px solid aqua', height: '200px', width: '200px'}} src={user.photoURL} alt="" />
                 </div>
             }
         </div>
