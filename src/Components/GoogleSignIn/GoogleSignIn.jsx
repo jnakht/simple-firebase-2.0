@@ -22,6 +22,14 @@ const GoogleSignIn = () => {
     return (
         <div>
             <button onClick={handleGoogleSignIn}>Sign In with Google</button>
+
+            {
+                user && <div>
+                    <h3>UserName: {user.displayName}</h3>
+                    <p>User Email: {user.email}</p>
+                    <img src={user.photoURL} alt="" />
+                </div>
+            }
         </div>
     );
 };
